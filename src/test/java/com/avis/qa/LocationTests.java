@@ -35,7 +35,7 @@ public class LocationTests extends TestBase {
    /**
     * To search for the location from location field.
     **/
-   //@Test(groups = {REGRESSION, SANITY}, dataProvider = TEST_DATA, dataProviderClass = CSVUtils.class)
+   //@Test(groups = {REGRESSION, SANITY,SMOKE}, dataProvider = TEST_DATA, dataProviderClass = CSVUtils.class)
    public void Location_Search_MnemonicCodeRes(String pickUpLocation, String firstName, String lastName, String email,
                                                String phoneNo) {
        launchUrl();
