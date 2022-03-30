@@ -17,32 +17,32 @@ import static org.testng.Assert.assertTrue;
  *
  * @author ikumar
  */
-//public class LocationTests extends TestBase {
-//
-//
-//    /**
-//     * To verify the Browse functionality on the Location Page
-//     */
-//    @Test(groups = {REGRESSION, SANITY, SMOKE})
-//    public void Location_Browse_Category() {
-//        launchUrl();
-//        Homepage homepage = new Homepage(getDriver());
-//        Locations locations = homepage.goToFindALocationPage();
-//        locations.browserLocation();
-//        Assert.assertTrue(locations.isMakeAReservationButtonDisplayed(), "Make a Reservation button is not displayed");
-//    }
-//
-//    /**
-//     * To search for the location from location field.
-//     **/
-//    //@Test(groups = {REGRESSION, SANITY}, dataProvider = TEST_DATA, dataProviderClass = CSVUtils.class)
-//    public void Location_Search_MnemonicCodeRes(String pickUpLocation, String firstName, String lastName, String email,
-//                                                String phoneNo) {
-//        launchUrl();
-//        LocationHelper locationHelper = new LocationHelper(getDriver());
-//        Confirmation confirmation = locationHelper.Location_Search_MnemonicCodeRes(pickUpLocation, firstName, lastName, email, phoneNo);
-//        assertTrue(confirmation.isConfirmationNumberDisplayed(), "Confirmation Number is not displayed");
-//        confirmation.cancelReservation();
-//    }
-//
-//}
+public class LocationTests extends TestBase {
+
+
+   /**
+    * To verify the Browse functionality on the Location Page
+    */
+   @Test(groups = {REGRESSION, SANITY, SMOKE})
+   public void Location_Browse_Category() {
+       launchUrl();
+       Homepage homepage = new Homepage(getDriver());
+       Locations locations = homepage.goToFindALocationPage();
+       locations.browserLocation();
+       Assert.assertTrue(locations.isMakeAReservationButtonDisplayed(), "Make a Reservation button is not displayed");
+   }
+
+   /**
+    * To search for the location from location field.
+    **/
+   //@Test(groups = {REGRESSION, SANITY}, dataProvider = TEST_DATA, dataProviderClass = CSVUtils.class)
+   public void Location_Search_MnemonicCodeRes(String pickUpLocation, String firstName, String lastName, String email,
+                                               String phoneNo) {
+       launchUrl();
+       LocationHelper locationHelper = new LocationHelper(getDriver());
+       Confirmation confirmation = locationHelper.Location_Search_MnemonicCodeRes(pickUpLocation, firstName, lastName, email, phoneNo);
+       assertTrue(confirmation.isConfirmationNumberDisplayed(), "Confirmation Number is not displayed");
+       confirmation.cancelReservation();
+   }
+
+}
