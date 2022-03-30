@@ -26,7 +26,6 @@ out
 .idea
 *.iml
 *.DS_Store
-target
 allure-results
 emailable-report.html
 testng-results.xml
