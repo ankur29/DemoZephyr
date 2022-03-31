@@ -23,7 +23,7 @@ public class LocationTests extends TestBase {
    /**
     * To verify the Browse functionality on the Location Page
     */
-   @Test(groups = {REGRESSION, SANITY, SMOKE})
+//    @Test(groups = {REGRESSION, SANITY, SMOKE})
    public void Location_Browse_Category() {
        launchUrl();
        Homepage homepage = new Homepage(getDriver());
