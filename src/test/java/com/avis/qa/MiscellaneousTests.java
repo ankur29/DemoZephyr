@@ -22,7 +22,7 @@ public class MiscellaneousTests extends TestBase {
        assertTrue(getDriver().getTitle().contains(title), "Page title is incorrect");
    }
 
-   @Test(groups = {REGRESSION, SANITY,SMOKE}, dataProvider = TEST_DATA, dataProviderClass = CSVUtils.class)
+//   @Test(groups = {REGRESSION, SANITY,SMOKE}, dataProvider = TEST_DATA, dataProviderClass = CSVUtils.class)
    public void Misc_OffersPage_Reservation(String pickUplocation, String firstName, String lastName, String email,
                                            String phoneNo) {
        launchUrl();
@@ -33,7 +33,7 @@ public class MiscellaneousTests extends TestBase {
    }
 
 
-  @Test(groups = {REGRESSION, SANITY}, dataProvider = TEST_DATA, dataProviderClass = CSVUtils.class)
+ // @Test(groups = {REGRESSION, SANITY}, dataProvider = TEST_DATA, dataProviderClass = CSVUtils.class)
    public void Misc_BusinessPrograms_BaseRateGuarnatee(String wizardNo, String password, String pickup, String fName,
                                                        String lName, String email, String phone, String bestRateQuote, String LowerRateCar_bestRateQuote,
                                                        String pickupLocation, String DropOffLocation, String vehicle_Type, String webSite, String comments) {
