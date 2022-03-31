@@ -44,7 +44,7 @@ public class MiscellaneousTests extends TestBase {
                webSite, comments);
    }
 
-   @Test(groups = {REGRESSION, SANITY,SMOKE}, dataProvider = TEST_DATA, dataProviderClass = CSVUtils.class)
+//    @Test(groups = {REGRESSION, SANITY,SMOKE}, dataProvider = TEST_DATA, dataProviderClass = CSVUtils.class)
    public void Misc_CarGuide_Res(String pickUpLoc, String firstName, String lastName, String email, String phoneNo) {
        launchUrl();
        MiscHelper miscHelper = new MiscHelper(getDriver());
