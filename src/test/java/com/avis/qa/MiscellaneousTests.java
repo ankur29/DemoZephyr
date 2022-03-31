@@ -33,7 +33,7 @@ public class MiscellaneousTests extends TestBase {
    }
 
 
-//    @Test(groups = {REGRESSION, SANITY}, dataProvider = TEST_DATA, dataProviderClass = CSVUtils.class)
+  @Test(groups = {REGRESSION, SANITY}, dataProvider = TEST_DATA, dataProviderClass = CSVUtils.class)
    public void Misc_BusinessPrograms_BaseRateGuarnatee(String wizardNo, String password, String pickup, String fName,
                                                        String lName, String email, String phone, String bestRateQuote, String LowerRateCar_bestRateQuote,
                                                        String pickupLocation, String DropOffLocation, String vehicle_Type, String webSite, String comments) {
