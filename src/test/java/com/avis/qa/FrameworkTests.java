@@ -14,17 +14,17 @@ import static org.testng.Assert.assertTrue;
  *
  * @author ikumar
  */
-//public class FrameworkTests extends TestBase {
-//
-//    /**
-//     * ALM Testcase: NA
-//     */
-//    @Test(groups = {SANITY, REGRESSION})
-//    @Story(HOMEPAGE)
-//    public void verifyHomepageLogo() {
-//        launchUrl();
-//        Homepage homePage = new Homepage(getDriver());
-//        assertTrue(homePage.isAvisLogoDisplayed(),"Avis logo is not displayed");
-//    }
+public class FrameworkTests extends TestBase {
 
-//}
+   /**
+    * ALM Testcase: NA
+    */
+   @Test(groups = {SANITY, REGRESSION,SMOKE})
+   @Story(HOMEPAGE)
+   public void verifyHomepageLogo() {
+       launchUrl();
+       Homepage homePage = new Homepage(getDriver());
+       assertTrue(homePage.isAvisLogoDisplayed(),"Avis logo is not displayed");
+   }
+
+}
