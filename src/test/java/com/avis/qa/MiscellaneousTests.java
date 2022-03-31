@@ -22,7 +22,7 @@ public class MiscellaneousTests extends TestBase {
        assertTrue(getDriver().getTitle().contains(title), "Page title is incorrect");
    }
 
-//    @Test(groups = {REGRESSION, SANITY}, dataProvider = TEST_DATA, dataProviderClass = CSVUtils.class)
+   @Test(groups = {REGRESSION, SANITY,SMOKE}, dataProvider = TEST_DATA, dataProviderClass = CSVUtils.class)
    public void Misc_OffersPage_Reservation(String pickUplocation, String firstName, String lastName, String email,
                                            String phoneNo) {
        launchUrl();
