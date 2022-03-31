@@ -14,44 +14,44 @@ import static org.testng.Assert.assertTrue;
  *
  * @author ikumar
  */
-//public class MiscellaneousTests extends TestBase {
-//
+public class MiscellaneousTests extends TestBase {
+
+   @Test(groups = {REGRESSION, SANITY,SMOKE}, dataProvider = TEST_DATA, dataProviderClass = CSVUtils.class)
+   public void Misc_OneClick_VanityURL(String url, String title) {
+       launchUrl(getAvisUrl(url));
+       assertTrue(getDriver().getTitle().contains(title), "Page title is incorrect");
+   }
+
 //    @Test(groups = {REGRESSION, SANITY}, dataProvider = TEST_DATA, dataProviderClass = CSVUtils.class)
-//    public void Misc_OneClick_VanityURL(String url, String title) {
-//        launchUrl(getAvisUrl(url));
-//        assertTrue(getDriver().getTitle().contains(title), "Page title is incorrect");
-//    }
-//
+   public void Misc_OffersPage_Reservation(String pickUplocation, String firstName, String lastName, String email,
+                                           String phoneNo) {
+       launchUrl();
+       MiscHelper miscHelper = new MiscHelper(getDriver());
+       Confirmation confirmation = miscHelper.Misc_OffersPage_Reservation(pickUplocation, firstName, lastName, email, phoneNo);
+       assertTrue(confirmation.isConfirmationNumberDisplayed(), "Confirmation Number is not displayed");
+       confirmation.cancelReservation();
+   }
+
+
 //    @Test(groups = {REGRESSION, SANITY}, dataProvider = TEST_DATA, dataProviderClass = CSVUtils.class)
-//    public void Misc_OffersPage_Reservation(String pickUplocation, String firstName, String lastName, String email,
-//                                            String phoneNo) {
-//        launchUrl();
-//        MiscHelper miscHelper = new MiscHelper(getDriver());
-//        Confirmation confirmation = miscHelper.Misc_OffersPage_Reservation(pickUplocation, firstName, lastName, email, phoneNo);
-//        assertTrue(confirmation.isConfirmationNumberDisplayed(), "Confirmation Number is not displayed");
-//        confirmation.cancelReservation();
-//    }
-//
-//
-//    @Test(groups = {REGRESSION, SANITY}, dataProvider = TEST_DATA, dataProviderClass = CSVUtils.class)
-//    public void Misc_BusinessPrograms_BaseRateGuarnatee(String wizardNo, String password, String pickup, String fName,
-//                                                        String lName, String email, String phone, String bestRateQuote, String LowerRateCar_bestRateQuote,
-//                                                        String pickupLocation, String DropOffLocation, String vehicle_Type, String webSite, String comments) {
-//        launchUrl();
-//        MiscHelper miscHelper = new MiscHelper(getDriver());
-//        miscHelper.Misc_BusinessPrograms_BaseRateGuarnatee(wizardNo, password, pickup, fName, lName, email,
-//                phone, bestRateQuote, LowerRateCar_bestRateQuote, pickupLocation, DropOffLocation, vehicle_Type,
-//                webSite, comments);
-//    }
-//
-//    @Test(groups = {REGRESSION, SANITY}, dataProvider = TEST_DATA, dataProviderClass = CSVUtils.class)
-//    public void Misc_CarGuide_Res(String pickUpLoc, String firstName, String lastName, String email, String phoneNo) {
-//        launchUrl();
-//        MiscHelper miscHelper = new MiscHelper(getDriver());
-//        Confirmation confirmation = miscHelper.Misc_CarGuide_Res(pickUpLoc, firstName, lastName, email, phoneNo);
-//        assertTrue(confirmation.isConfirmationNumberDisplayed(), "Confirmation Number is not displayed");
-//        confirmation.cancelReservation();
-//    }
-//
-//
-//}
+   public void Misc_BusinessPrograms_BaseRateGuarnatee(String wizardNo, String password, String pickup, String fName,
+                                                       String lName, String email, String phone, String bestRateQuote, String LowerRateCar_bestRateQuote,
+                                                       String pickupLocation, String DropOffLocation, String vehicle_Type, String webSite, String comments) {
+       launchUrl();
+       MiscHelper miscHelper = new MiscHelper(getDriver());
+       miscHelper.Misc_BusinessPrograms_BaseRateGuarnatee(wizardNo, password, pickup, fName, lName, email,
+               phone, bestRateQuote, LowerRateCar_bestRateQuote, pickupLocation, DropOffLocation, vehicle_Type,
+               webSite, comments);
+   }
+
+   @Test(groups = {REGRESSION, SANITY,SMOKE}, dataProvider = TEST_DATA, dataProviderClass = CSVUtils.class)
+   public void Misc_CarGuide_Res(String pickUpLoc, String firstName, String lastName, String email, String phoneNo) {
+       launchUrl();
+       MiscHelper miscHelper = new MiscHelper(getDriver());
+       Confirmation confirmation = miscHelper.Misc_CarGuide_Res(pickUpLoc, firstName, lastName, email, phoneNo);
+       assertTrue(confirmation.isConfirmationNumberDisplayed(), "Confirmation Number is not displayed");
+       confirmation.cancelReservation();
+   }
+
+
+}
