@@ -28,7 +28,7 @@ public class ReservationTests extends TestBase {
      * ALM Testcase: Res_Avis_US_007_Reservation_Outbound_PayNowAnonymous
      * ALM Testcase: Res_Avis_US_007_Reservation_Outbound_PayNow
      */
-   @Test(groups = {REGRESSION,SMOKE}, dataProvider = TEST_DATA, dataProviderClass = CSVUtils.class)
+//    @Test(groups = {REGRESSION,SMOKE}, dataProvider = TEST_DATA, dataProviderClass = CSVUtils.class)
    @Description("Test Case Description: Verify Reservation Outbound PayNow functionality")
    @Story(RESERVATION)
     public void Reservation_Outbound_PayNow(String pickUpLocation, String firstName, String lastName, String email, String phoneNumber, String ccNumber, String cvv) {
@@ -104,7 +104,7 @@ public class ReservationTests extends TestBase {
         assertTrue(reservationWidget.isErrorMessageDisplayed(months));
     }
 
- @Test(groups = {REGRESSION, SANITY,SMOKE}, dataProvider = TEST_DATA, dataProviderClass = CSVUtils.class)
+//  @Test(groups = {REGRESSION, SANITY,SMOKE}, dataProvider = TEST_DATA, dataProviderClass = CSVUtils.class)
     public void Reservation_ErrorMessage_PayNow(String pickUpLocation, String firstName, String lastName, String email,
                                                 String phoneNo, String ccNo, String cvv) {
         launchUrl();
@@ -136,7 +136,7 @@ public class ReservationTests extends TestBase {
         assertTrue(confirmation.isExtrasAddedMessageDisplayed(), "Extra Added Message is not displayed");
     }
 
- @Test(groups = {REGRESSION,SMOKE}, dataProvider = TEST_DATA, dataProviderClass = CSVUtils.class)
+//  @Test(groups = {REGRESSION,SMOKE}, dataProvider = TEST_DATA, dataProviderClass = CSVUtils.class)
     public void Reservation_GEBUser_PayLater(String pickUpLocation, String wizardNo, String lastName, String firstName,
                                              String email, String phoneNo) {
         launchUrl();
