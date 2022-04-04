@@ -65,11 +65,11 @@ public class ReservationTests extends TestBase {
         ReservationHelper reservationHelper = new ReservationHelper(getDriver());
         ReviewAndBook reviewAndBook = reservationHelper.Reservation_CCOLocation_PayLater(pickUpLocation, firstName, lastName, email, phoneNo,
                 cCNumber);
-        assertTrue(reviewAndBook.cvvCCOValidation(),"CVV is displayed");
+        assertFalse(reviewAndBook.cvvCCOValidation(),"CVV is displayed");
     }
 
 
-//    @Test(groups = {REGRESSION}, dataProvider = TEST_DATA, dataProviderClass = CSVUtils.class)
+   @Test(groups = {REGRESSION}, dataProvider = TEST_DATA, dataProviderClass = CSVUtils.class)
     public void Reservation_Costco_PayLater(String pickUpLocation, String awd, String membershipNo, String fname,
                                             String lname, String email, String phoneNo)  {
         launchUrl();
@@ -92,7 +92,7 @@ public class ReservationTests extends TestBase {
         assertTrue(reservationWidget.isErrorMessageDisplayed(months));
     }
 
-//    @Test(groups = {REGRESSION, SANITY,SMOKE}, dataProvider = TEST_DATA, dataProviderClass = CSVUtils.class)
+   @Test(groups = {REGRESSION, SANITY,SMOKE}, dataProvider = TEST_DATA, dataProviderClass = CSVUtils.class)
     public void Reservation_EMEA330Days_ErrorMessage(String pickUpLocation, String months) {
         launchUrl();
         ReservationWidget reservationWidget = new ReservationWidget(getDriver());
