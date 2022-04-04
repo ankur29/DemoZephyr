@@ -37,7 +37,7 @@ public class ReservationTests extends TestBase {
         reservationHelper.Reservation_DomesticOrOutbound_PayNow(pickUpLocation, firstName, lastName, email, phoneNumber,
                 ccNumber, cvv);
         Confirmation confirmation = new Confirmation(getDriver());
-        assertFalse(confirmation.isConfirmationNumberDisplayed(), "Confirmation Number is not displayed");
+        assertTrue(confirmation.isConfirmationNumberDisplayed(), "Confirmation Number is not displayed");
         confirmation.cancelReservationWithConfirmationBox();
     }
 
@@ -65,7 +65,7 @@ public class ReservationTests extends TestBase {
         ReservationHelper reservationHelper = new ReservationHelper(getDriver());
         ReviewAndBook reviewAndBook = reservationHelper.Reservation_CCOLocation_PayLater(pickUpLocation, firstName, lastName, email, phoneNo,
                 cCNumber);
-        assertFalse(reviewAndBook.cvvCCOValidation(),"CVV is displayed");
+        assertTrue(reviewAndBook.cvvCCOValidation(),"CVV is displayed");
     }
 
 
