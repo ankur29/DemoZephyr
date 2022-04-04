@@ -44,9 +44,9 @@ public class ReservationTests extends TestBase {
     /**
      * ALM Testcase: Res_Avis_US_005_Reservation_Domestic_PayNow
      */
-    @Test(groups = {REGRESSION,SMOKE}, dataProvider = TEST_DATA, dataProviderClass = CSVUtils.class)
-    @Description("Test Case Description: Verify Reservation Domestic PayNow functionality")
-    @Story(RESERVATION)
+//     @Test(groups = {REGRESSION,SMOKE}, dataProvider = TEST_DATA, dataProviderClass = CSVUtils.class)
+//     @Description("Test Case Description: Verify Reservation Domestic PayNow functionality")
+//     @Story(RESERVATION)
     public void Reservation_Domestic_PayNow(String pickUpLocation, String firstName, String lastName, String email,
                                             String phoneNumber, String ccNumber, String cvv) {
         launchUrl();
@@ -104,7 +104,7 @@ public class ReservationTests extends TestBase {
         assertTrue(reservationWidget.isErrorMessageDisplayed(months));
     }
 
- @Test(groups = {REGRESSION, SANITY,SMOKE}, dataProvider = TEST_DATA, dataProviderClass = CSVUtils.class)
+//  @Test(groups = {REGRESSION, SANITY,SMOKE}, dataProvider = TEST_DATA, dataProviderClass = CSVUtils.class)
     public void Reservation_ErrorMessage_PayNow(String pickUpLocation, String firstName, String lastName, String email,
                                                 String phoneNo, String ccNo, String cvv) {
         launchUrl();
@@ -115,7 +115,7 @@ public class ReservationTests extends TestBase {
         assertEquals(reviewAndBook.getDummyCreditCardErrorMessage(), DUMMY_CC_ERROR_MESSAGE, "Credit card error message is incorrect");
     }
 
-   @Test(groups = {REGRESSION, SANITY,SMOKE}, dataProvider = TEST_DATA, dataProviderClass = CSVUtils.class)
+//    @Test(groups = {REGRESSION, SANITY,SMOKE}, dataProvider = TEST_DATA, dataProviderClass = CSVUtils.class)
     public void Reservation_OneClick_Step3(String url) {
         launchUrl();
         Homepage homepage = new Homepage(getDriver());
