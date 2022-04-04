@@ -37,7 +37,7 @@ public class ReservationTests extends TestBase {
         reservationHelper.Reservation_DomesticOrOutbound_PayNow(pickUpLocation, firstName, lastName, email, phoneNumber,
                 ccNumber, cvv);
         Confirmation confirmation = new Confirmation(getDriver());
-        assertTrue(confirmation.isConfirmationNumberDisplayed(), "Confirmation Number is not displayed");
+        assertFalse(confirmation.isConfirmationNumberDisplayed(), "Confirmation Number is not displayed");
         confirmation.cancelReservationWithConfirmationBox();
     }
 
